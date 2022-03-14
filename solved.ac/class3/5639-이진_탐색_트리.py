@@ -1,3 +1,8 @@
+"""
+이 문제는 함수 재귀로 접근하는 순간 recursion error 발생
+임의로 setrecursionlimit을 늘렸더니 메모리 초과 에러 발생
+그렇다면 재귀가 아닌 queue로 재귀를 구현해보자!!
+"""
 # import sys
 
 # sys.setrecursionlimit(10 ** 6)
@@ -53,8 +58,6 @@ class BinarySearchTree(object):
                 else:
                     queue.append(root.left)
                     queue.append(root.right)
-                    # _post_order_traversal(root.left)
-                    # _post_order_traversal(root.right)
                     result.append(root.data)
 
         _post_order_traversal(self.root)
