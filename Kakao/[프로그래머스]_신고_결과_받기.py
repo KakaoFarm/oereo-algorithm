@@ -1,29 +1,3 @@
-
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
 def solution(id_list, report, k):
     answer = []
     support_users = dict()
@@ -43,9 +17,8 @@ def solution(id_list, report, k):
     for index, value in support_users.items():
         temp = 0
         for user in value:
-            if len(supported_users[user])>=k:
-                temp +=1
+            if len(supported_users[user]) >= k:
+                temp += 1
         answer.append(temp)
-
 
     return answer
